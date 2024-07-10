@@ -1,4 +1,8 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
+  resources :pedidos do
+    resources :pedido_produtos
+  end
+  resources :clientes
   resources :produtos
   resources :tipo_produtos
   get '/home', to: 'home#index'
